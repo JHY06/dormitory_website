@@ -1,0 +1,352 @@
+/* 기본 스타일 */
+body {
+  font: 1rem/1.6 "Pretendard", sans-serif !important;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+.main {
+  width: 100%;
+}
+
+.inner {
+  max-width: 82.5rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* 헤더 스타일 */
+.header {
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.gnb ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.gnb li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  padding: 5px 0;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.gnb li a:hover {
+  color: #f8a12e;
+}
+
+.gnb li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #f8a12e;
+  transition: width 0.3s;
+}
+
+.gnb li a:hover::after,
+.gnb li a.active::after {
+  width: 100%;
+}
+
+.gnb li a.active {
+  color: #f8a12e;
+}
+
+/* 햄버거 메뉴 */
+.hamburger-menu {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.hamburger-menu img {
+  width: 24px;
+  height: 24px;
+}
+
+/* 시각적 배너 */
+.visual {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/visual.jpg") no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+  margin-bottom: 50px;
+}
+
+.visual h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease;
+}
+
+.visual p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  animation: fadeInUp 1s ease 0.3s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 섹션 공통 스타일 */
+section {
+  margin-bottom: 50px;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+section h2::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background-color: #f8a12e;
+  bottom: 0;
+  left: 0;
+}
+
+/* 공지사항 섹션 */
+.announcements {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.announcements ul {
+  list-style: none;
+  padding: 0;
+}
+
+.announcements ul li {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.announcements ul li:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.announcements ul li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  padding: 5px 0;
+  transition: color 0.3s;
+}
+
+.announcements ul li a:hover {
+  color: #f8a12e;
+}
+
+/* 기숙사 정보 섹션 */
+.dormitory-info {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.dormitory-info p {
+  margin-bottom: 20px;
+}
+
+.dormitory-info ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  padding-left: 0;
+}
+
+.dormitory-info ul li {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.dormitory-info ul li::before {
+  content: "✓";
+  margin-right: 10px;
+  color: #f8a12e;
+  font-weight: bold;
+}
+
+/* 자취방 정보 섹션 */
+.rental-info {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* 인기 매물 섹션 */
+.popular-items {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.popular-items .items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.popular-items .item {
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.popular-items .item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 광고 섹션 */
+.ads {
+  text-align: center;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 50px;
+}
+
+/* 푸터 */
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.footer p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+/* 반응형 (태블릿) */
+@media (max-width: 1024px) {
+  .popular-items .items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 반응형 (모바일) */
+@media (max-width: 770px) {
+  .inner {
+    width: 100%;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .gnb {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 100;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .gnb.active {
+    right: 0;
+  }
+
+  .gnb ul {
+    flex-direction: column;
+    padding: 50px 20px;
+  }
+
+  .gnb ul li a {
+    display: block;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .visual {
+    padding: 50px 20px;
+  }
+
+  .visual h2 {
+    font-size: 2rem;
+  }
+
+  .popular-items .items {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 0 20px;
+  }
+}

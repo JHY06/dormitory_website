@@ -1,0 +1,260 @@
+/* 로그인 페이지 스타일 */
+.login-section {
+  padding: 50px 0;
+  background-color: #f8f9fa;
+  min-height: calc(100vh - 200px);
+  display: flex;
+  align-items: center;
+}
+
+.login-container {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.login-header {
+  background-color: #f8a12e;
+  color: #fff;
+  padding: 30px;
+  text-align: center;
+}
+
+.login-header h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.login-form-container {
+  padding: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #f8a12e;
+  outline: none;
+}
+
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+}
+
+.remember-me input {
+  margin-right: 5px;
+}
+
+.find-account a {
+  color: #666;
+  text-decoration: none;
+}
+
+.find-account a:hover {
+  text-decoration: underline;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #f8a12e;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #e07c12;
+}
+
+.login-divider {
+  text-align: center;
+  margin: 20px 0;
+  position: relative;
+}
+
+.login-divider:before,
+.login-divider:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.login-divider:before {
+  left: 0;
+}
+
+.login-divider:after {
+  right: 0;
+}
+
+.login-divider span {
+  display: inline-block;
+  padding: 0 15px;
+  background-color: #fff;
+  color: #666;
+  position: relative;
+  z-index: 1;
+}
+
+.phone-login {
+  margin-top: 20px;
+}
+
+.phone-login h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #333;
+  text-align: center;
+}
+
+.phone-input-group,
+.verification-input-group {
+  display: flex;
+  gap: 10px;
+}
+
+.phone-input-group input,
+.verification-input-group input {
+  flex: 1;
+}
+
+.verification-btn {
+  padding: 0 15px;
+  background-color: #f8a12e;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+}
+
+.verification-btn:hover {
+  background-color: #e07c12;
+}
+
+.timer {
+  display: flex;
+  align-items: center;
+  color: #f44336;
+  font-weight: 500;
+  min-width: 50px;
+}
+
+.register-link {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.register-link a {
+  color: #f8a12e;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+.hidden {
+  display: none;
+}
+
+/* 햄버거 메뉴 스타일 */
+.hamburger-menu {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.hamburger-menu img {
+  width: 24px;
+  height: 24px;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 770px) {
+  .login-container {
+    width: 90%;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .gnb {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 100;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .gnb.active {
+    right: 0;
+  }
+
+  .gnb ul {
+    flex-direction: column;
+    padding: 50px 20px;
+  }
+
+  .gnb ul li a {
+    display: block;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .phone-input-group,
+  .verification-input-group {
+    flex-direction: column;
+  }
+
+  .verification-btn {
+    padding: 12px;
+  }
+}
